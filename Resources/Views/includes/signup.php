@@ -8,26 +8,26 @@ $func = new user_functions();
 $user = new controller();
 
  if($func->is_post_request() && isset($_POST['regBtn'])){
- 	echo $args = $_POST['user'];
-	$user->setArg($args);
-	$result = $user->saves();
+ 	$args = $_POST['user'];
+	$user->setArgS($args);
+	$result = $user->save();
 
 	print_r($args);
 	
-// 	if($result == true) {
-// 		echo '
-// 		<script >
-// 			alert("Your account was created successfully, You now Login with your details");
-// 		</script>	
-// 		';
-// 	 } else {
-// 		echo '
-// 		<script >
-// 			alert("The user was not created successfully.");
-// 		</script>	
-// 		';
+	if($result == true) {
+		echo '
+		<script >
+			alert("Your account was created successfully, You now Login with your details");
+		</script>	
+		';
+	 } else {
+		echo '
+		<script >
+			alert("The user was not created successfully.");
+		</script>	
+		';
 		
-//  	}
+ 	}
   
 }
 
