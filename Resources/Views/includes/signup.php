@@ -12,22 +12,21 @@ $func = new user_functions();
 	$user->setArgs($args);
 	$result = $user->save();
 
+	print_r($args);
 	
-	
-	if($result === true) {
-// 		echo '
-// 		<script >
-// 			alert("Your account was created successfully, You now Login with your details");
-// 		</script>	
-// 		';
-		print_r($result);
+	if($result == true) {
+		echo '
+		<script >
+			alert("Your account was created successfully, You now Login with your details");
+		</script>	
+		';
 	 } else {
 		echo '
 		<script >
 			alert("The user was not created successfully.");
 		</script>	
 		';
-		print_r($result);
+		
  	}
   
 }
