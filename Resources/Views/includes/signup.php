@@ -27,6 +27,7 @@ $func = new user_functions();
 			alert("The user was not created successfully.");
 		</script>	
 		';
+		print_r($result);
  	}
   
 }
