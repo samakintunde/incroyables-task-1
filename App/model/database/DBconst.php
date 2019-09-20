@@ -3,9 +3,9 @@
 
 
     class DBconst {
-        protected const DB_SERVER = "localhost";
-        protected const DB_USER = "root";
-        protected const DB_PASSWORD = "";
-        protected const DB_NAME = "userReg";
+        protected const DB_SERVER = "db4free.net";
+        protected const DB_USER = "ozioma";
+        protected const DB_PASSWORD = "ozioma19";
+        protected const DB_NAME = "user_reg";
     }
 ?>
