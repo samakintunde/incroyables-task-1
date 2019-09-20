@@ -28,14 +28,14 @@
           
 
             if ($chechEmail != false && $cheakPassword == $password) {
-              return true;
-             
+              return $chechEmail;
             }else{
                 return false;
             }
 
         }
 
+        
         public function save(){
             return parent::create();
         }
@@ -57,6 +57,8 @@
             }
 
         }
+
+        
        
     }
 

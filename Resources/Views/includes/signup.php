@@ -15,12 +15,15 @@ $func = new user_functions();
 	print_r($result);
 	
 	if($result === true) {
-		$func->redirect_to('Resources/Views/welcome.php');
-
+		echo '
+		<script >
+			alert("Your account was created successfully, You now Login with your details");
+		</script>	
+		';
 	 } else {
 		echo '
 		<script >
-			alert("The user was created successfully.");
+			alert("The user was not created successfully.");
 		</script>	
 		';
  	}

@@ -6,9 +6,9 @@
 </html>
 <?php
 
-    use HNG_Internship\model\database\DB;
-    use HNG_Internship\controller\controller;
+    // use HNG_Internship\model\database\DB;
+    // use HNG_Internship\controller\controller;
 
-    $closeDB = new DB;
-    $closeDB->db_disconnect(self::$database);
+    // $closeDB = new DB;
+    // $closeDB->db_disconnect(self::$database);
 ?>
