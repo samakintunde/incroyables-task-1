@@ -15,19 +15,14 @@ $func = new user_functions();
 	print_r($result);
 	
 	if($result === true) {
-		echo '
-		<script >
-			alert("The user was created successfully.");
-		</script>	
-		';
-	//  // redirect_to(url_for('/staff/admins/show.php?id=' . $new_id));
+		$func->redirect_to('Resources/Views/welcome.php');
+
 	 } else {
 		echo '
 		<script >
 			alert("The user was created successfully.");
 		</script>	
 		';
-	//   // show errors
  	}
   
 }
@@ -49,17 +44,17 @@ $func = new user_functions();
 									<form method="POST">
 									  <div class="form-group">
 									    <!--label for="exampleInputEmail1">Email address</label-->
-									    <input type="text" class="form-control" placeholder="Full name" name="user[fullname]">
+									    <input type="text" class="form-control" minlength="3" placeholder="Full name" name="user[fullname]" required >
 									  </div>
 									  <div class="form-group">
 									    <!--label for="exampleInputEmail1">Email address</label-->
-									    <input type="email" class="form-control" name="user[email]" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@email.xyz">
+									    <input type="email" class="form-control" name="user[email]" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@email.xyz" required>
 									  </div>
 
 
 									  <div class="form-group">
 									    <!--label for="exampleInputPassword1">Password</label-->
-									    <input type="password" class="form-control" name="user[password]" id="exampleInputPassword1" placeholder="Enter Password">
+									    <input type="password" class="form-control" minlength="6" name="user[password]" id="exampleInputPassword1" placeholder="Enter Password" required >
 									  </div>
 									  <button type="submit" class="btn btn-primary col-12" name="regBtn">REGISTER</button>
 									  

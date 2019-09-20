@@ -18,15 +18,7 @@
             return $_SERVER['REQUEST_METHOD'] == 'POST';
         }
           
-        public function is_get_request() 
-        {
-            return $_SERVER['REQUEST_METHOD'] == 'GET';
-        }
-        public function h($string="") 
-        {
-            return htmlspecialchars($string);
-        }
-
+        
         public function find_by_sql($sql)
         {
             $result = self::$database->query($sql);

@@ -4,3 +4,11 @@
 <script type="text/javascript" src="Resources/js/made.js"></script>
 </body>
 </html>
+<?php
+
+    use HNG_Internship\model\database\DB;
+    use HNG_Internship\controller\controller;
+
+    $closeDB = new DB;
+    $closeDB->db_disconnect(self::$database);
+?>

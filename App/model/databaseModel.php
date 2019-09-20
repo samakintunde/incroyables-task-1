@@ -31,21 +31,9 @@ class databaseModel {
     return $object_array;
   }
 
-  static public function find_all() {
-    $sql = "SELECT * FROM " . static::$table_name;
-    return static::find_by_sql($sql);
-  }
-
-  static public function count_all() {
-    $sql = "SELECT COUNT(*) FROM " . static::$table_name;
-    $result_set = self::$database->query($sql);
-    $row = $result_set->fetch_array();
-    return array_shift($row);
-  }
-
-  static public function find_by_id($id) {
+  static public function find_by_email($email) {
     $sql = "SELECT * FROM " . static::$table_name . " ";
-    $sql .= "WHERE id='" . self::$database->escape_string($id) . "'";
+    $sql .= "WHERE email='" . self::$database->escape_string($email) . "'";
     $obj_array = static::find_by_sql($sql);
     if(!empty($obj_array)) {
       return array_shift($obj_array);
@@ -54,14 +42,13 @@ class databaseModel {
     }
   }
 
-            
-
-  static public function find_by_email($email) {
-    $sql = "SELECT * FROM " . static::$table_name . " ";
+  static public function find_password($email) {
+    $sql = "SELECT hashed_password From " . static::$table_name . " ";
     $sql .= "WHERE email='" . self::$database->escape_string($email) . "'";
-    $obj_array = static::find_by_sql($sql);
-    if(!empty($obj_array)) {
-      return array_shift($obj_array);
+    $result = self::$database->query($sql);
+    $count  = $result->num_rows;
+    if($count != 0) {
+      return $count;
     } else {
       return false;
     }
@@ -88,7 +75,7 @@ class databaseModel {
   }
 
   protected function create() {
-    $this->validate();
+    //$this->validate();
     if(!empty($this->errors)) { return false; }
 
     $attributes = $this->sanitized_attributes();
@@ -104,32 +91,6 @@ class databaseModel {
     return $result;
   }
 
-  protected function update() {
-    $this->validate();
-    if(!empty($this->errors)) { return false; }
-
-    $attributes = $this->sanitized_attributes();
-    $attribute_pairs = [];
-    foreach($attributes as $key => $value) {
-      $attribute_pairs[] = "{$key}='{$value}'";
-    }
-
-    $sql = "UPDATE " . static::$table_name . " SET ";
-    $sql .= join(', ', $attribute_pairs);
-    $sql .= " WHERE id='" . self::$database->escape_string($this->id) . "' ";
-    $sql .= "LIMIT 1";
-    $result = self::$database->query($sql);
-    return $result;
-  }
-
-  public function save() {
-    // A new record will not have an ID yet
-    if(isset($this->id)) {
-      return $this->update();
-    } else {
-      return $this->create();
-    }
-  }
 
   public function merge_attributes($args=[]) {
     foreach($args as $key => $value) {
@@ -157,21 +118,7 @@ class databaseModel {
     return $sanitized;
   }
 
-  public function delete() {
-    $sql = "DELETE FROM " . static::$table_name . " ";
-    $sql .= "WHERE id='" . self::$database->escape_string($this->id) . "' ";
-    $sql .= "LIMIT 1";
-    $result = self::$database->query($sql);
-    return $result;
-
-    // After deleting, the instance of the object will still
-    // exist, even though the database record does not.
-    // This can be useful, as in:
-    //   echo $user->first_name . " was deleted.";
-    // but, for example, we can't call $user->update() after
-    // calling $user->delete().
-  }
-
+  
 }
 
 ?>
