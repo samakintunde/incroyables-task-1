@@ -12,8 +12,7 @@ $user = new controller();
 	$user->setArgS($args);
 	$result = $user->save();
 
-	print_r($args);
-	
+	echo $args['fullname'];
 	if($result == true) {
 		echo '
 		<script >
@@ -26,7 +25,7 @@ $user = new controller();
 			alert("The user was not created successfully.");
 		</script>	
 		';
-		
+		echo $args['fullname'];
  	}
   
 }
