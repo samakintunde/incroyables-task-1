@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--=====================CSS=================================-->
+ <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/main.css">
 	<style type="text/css">
@@ -20,7 +21,7 @@
 						<div class="leftovalay"></div>
 						<div class="inner">
 							<div class="row content-0">
-								<div class="col-12 statusw"><span>LOGIN</span></div>
+								<div class="col-12 statusw"><span href="landing.php">LOGIN</span></div>
 							</div>
 							<div class="row">
 								<div class="col-12"><h2>WELCOME TO LES INCROYABLES</h2>
