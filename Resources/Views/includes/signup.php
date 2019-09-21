@@ -11,7 +11,7 @@ $user = new controller();
  	$args = $_POST['user'];
 	$user->setArgS($args);
 	$result = $user->save();
-	print_r($result);
+	
 	if($result) {
 		echo '
 		<script >
