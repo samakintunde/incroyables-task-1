@@ -11,8 +11,8 @@ $user = new controller();
  	$args = $_POST['user'];
 	$user->setArgS($args);
 	$result = $user->save();
-	
-	if($result == true) {
+	print_r($result);
+	if($result) {
 		echo '
 		<script >
 			alert("Your account was created successfully, You now Login with your details");
