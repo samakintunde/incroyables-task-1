@@ -75,9 +75,7 @@ class databaseModel {
   }
 
   protected function create() {
-    //$this->validate();
-    if(!empty($this->errors)) { return false; }
-
+    
     $attributes = $this->sanitized_attributes();
     $sql = "INSERT INTO " . static::$table_name . " (";
     $sql .= join(', ', array_keys($attributes));
@@ -87,8 +85,11 @@ class databaseModel {
     $result = self::$database->query($sql);
     if($result) {
       $this->id = self::$database->insert_id;
+         return $result;
+    }else{
+        return die(self::$database->error;);
     }
-    return $result;
+   
   }
 
 
