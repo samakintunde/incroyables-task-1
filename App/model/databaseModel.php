@@ -87,7 +87,7 @@ class databaseModel {
       $this->id = self::$database->insert_id;
          return $result;
     }else{
-        return die(self::$database->error);
+        return self::$database->error;
     }
    
   }
