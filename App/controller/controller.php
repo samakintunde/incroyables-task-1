@@ -23,9 +23,16 @@
         
         
         public function login($email, $password){
-          return  $chechEmail = parent::findEmail($email);
+            $chechEmail = parent::findEmail($email);
             $cheakPassword = $this->findPassword($email);
           
+            if ($chechEmail != false ) {
+              return $chechEmail;
+            }else{
+                return false;
+            }
+            
+            
 
 //             if ($chechEmail != false && $cheakPassword == $password) {
 //               return $chechEmail;
