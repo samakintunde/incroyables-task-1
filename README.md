@@ -19,9 +19,8 @@
 2. @Adeola Made
 3. @OfficerHades2️⃣
 4. @officialozioma
-5. @niyiojeyinka
-6. @Michael Lee
+5. @Michael Lee
+6. @Badabee
 7. @iamthekingmichael
 8. @Adaeze
-9. @Badabee
-10. @samakintunde37
+9. @samakintunde37
