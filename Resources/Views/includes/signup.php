@@ -9,9 +9,9 @@ $user = new controller();
 
  if($func->is_post_request() && isset($_POST['regBtn'])){
  	$args = $_POST['user'];
-	$u = $user->setArgS($args);
+	$user->setArgS($args);
 	$result = $user->save();
-	echo $u;
+	
 	if($result == true) {
 		echo '
 		<script >
