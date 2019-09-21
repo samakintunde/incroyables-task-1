@@ -18,7 +18,7 @@
 		$password = $_POST['password'] ?? '';
 		  
 		$logger = $userLogin->login($email, $password);
-		
+		print_r(logger);
 		if($logger != false ){
 			$sessions->login($logger);
 			$u_func->redirect_to('Resources/Views/landing.php');
