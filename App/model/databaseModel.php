@@ -84,7 +84,7 @@ class databaseModel {
     $sql .= "')";
     $result = self::$database->query($sql);
     if($result) {
-      $this->id = self::$database->insert_id;
+     // $this->id = self::$database->insert_id;
          return $result;
     }else{
         return self::$database->error;
