@@ -1,22 +1,27 @@
 <?php
 
 	use HNG_Internship\controller\controller;
+	use HNG_Internship\controller\Sessions;
 	use HNG_Internship\Methods\user_functions;
 	use HNG_Internship\model\userModel;
+	
 
 	$userLogin = new controller;
 	$u_func = new user_functions;
 	$u_model = new userModel;
+	$sessions = new Sessions;
+
 
 	
 	if ($u_func->is_post_request() && isset($_POST['login'])) {
 		$email = $_POST['email'] ?? '';
-  		$password = $_POST['password'] ?? '';
+		$password = $_POST['password'] ?? '';
+		  
 		$logger = $userLogin->login($email, $password);
 		
 		if($logger != false ){
-			
-			$u_func->redirect_to('Resources/Views/welcome.php');
+			$sessions->login($logger);
+			$u_func->redirect_to('Resources/Views/landing.php');
 		}else{
 			echo "<script>alert('NOT LOGGED IN INCORRECT USERNAME OR PASSWORD');</script>";
 		}

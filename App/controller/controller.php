@@ -25,17 +25,16 @@
         public function login($email, $password){
             $chechEmail = parent::findEmail($email);
             $cheakPassword = $this->findPassword($email);
-          
-
+         
             if ($chechEmail != false && $cheakPassword == $password) {
-              return true;
-             
+              return $chechEmail;
             }else{
                 return false;
             }
 
         }
 
+        
         public function save(){
             return parent::create();
         }
@@ -57,6 +56,8 @@
             }
 
         }
+
+        
        
     }
 

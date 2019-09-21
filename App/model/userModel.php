@@ -18,7 +18,6 @@
           $this->fullname = $args['fullname'] ?? '';
           $this->email = $args['email'] ?? '';
           $this->password = $args['password'] ?? '';
-         
       }
       
         public function full_name() {

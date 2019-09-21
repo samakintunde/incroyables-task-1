@@ -68,7 +68,6 @@ footer.navbar{border-bottom:0;border-top:1px solid #F4E70150;height:60px;}
 footer .made{color:#fff;font-weight: 500}
 .made-texts{border-left: 4px solid #F2DC0B}
 .modal-backdrop {z-index: 0;}
-
 /*============Responsiveness=================*/
 @media (min-width: 768px)  and (orientation: landscape) {
   .lefty{display: block}
