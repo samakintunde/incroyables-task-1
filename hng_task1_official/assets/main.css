@@ -1,0 +1,96 @@
+*{overflow: hidden;font-family:poppins;}
+/*============Login=================*/
+.panel-0{transition: width 2s, height 4s;}
+.panel-1{transition: width 2s, height 4s;}
+.fullvw{margin: 0;padding: 0}
+.mhide{display: none;}
+.content-0{height:45vh;vertical-align:bottom;margin-top:auto;}
+.lefty {color:#fff;float:right;background:url('../assets/banner-0.jpg');background-size:cover;background-repeat: no-repeat;background-attachment: fixed;height:100vh}
+.leftovalay{background-color:#ff000085;position: absolute;width: 100%;height: 100%;z-index: 0}
+.lefty a{color:#fff;font-weight:600;letter-spacing: .5px}
+.lefty .inner{padding:50px;z-index: 92}
+.lefty p{padding:25px 0;}
+.btn-0, .btn-1{border-radius:50px;border:2px solid #fff;padding: 10px 35px}
+.righty{background-color:#e8e8e8;height:100vh;padding-top: 10vh;float: left}
+.statusw span{float: right;}
+.righty form input{border-radius: 50px;padding: 25px}
+.righty form button{border-radius: 50px;padding: 13px 25px}
+.righty form a.forgot.btn{padding: 0px;margin-top: 25px}
+.righin{margin:auto;}
+.righty .form-control:focus{color:#495057;background-color:#fff;border-color:#F73C0130;outline:0;box-shadow:0 0 0 .2rem #F73C0150}
+.btn-primary{background-color:#F73C01;border-color:#F73C01;}
+.righty .down-0{margin-top:5rem;}
+.modal-body.col-10{margin:auto;padding:50px 0 20px;}
+.anns{padding-bottom: 35px}
+.exampleModalLong{max-width:300px;}
+#logo{padding-bottom:50px;}
+.fullvw-1{margin:0;}
+h1{font-weight:700;}
+/*============Sign=================*/
+.rightyone {color:#fff;background:url('../assets/banner-1.jpg');background-size:cover;background-repeat: no-repeat;background-attachment: fixed;height:100vh}
+.rightovalay{background-color:#98550199;position: absolute;width: 100%;height: 100%;z-index: 0}
+.rightyone a{color:#fff;font-weight:600;letter-spacing: .5px}
+.rightyone .inner{padding:50px;z-index: 92}
+.rightyone p{padding:25px 0;}
+.leftyone{background-color:#e8e8e8;height:100vh;padding-top: 10vh;}
+.statusw span{float: right;}
+.leftyone form input{border-radius: 50px;padding: 25px}
+.leftyone form button{border-radius: 50px;padding: 13px 25px}
+.leftyone form a.forgot.btn{padding: 0px;margin-top: 25px}
+.righin{margin:auto;}
+.leftyone .form-control:focus{color:#495057;background-color:#fff;border-color:#F73C0130;border:3px;outline:0;box-shadow:0 0 0 .2rem #F73C0150}
+.leftyone .btn-primary{background-color:#985501;border-color:#985501;}
+.leftyone .down-0{margin-top:5rem;}
+.rightyone{padding: 0}
+.leftyone #logo{padding-bottom:20px;}
+.leftyone h6{padding-bottom: 20px}
+/*============Landing Page CSS=================*/
+#landing{height:100vh;background:url('../assets/bg-web.jpg');background-repeat: no-repeat;background-position: bottom right;background-size: cover;background-color:#B00017;}
+.navbar.up{border-bottom: 1px solid #F4E70150}
+.made.navbar-toggler-icon{background: url('../assets/nav.png');background-size: contain;background-repeat: no-repeat;background-position: center center}
+.nav-link{color:#fff;font-size:15px;}
+.nav-link:hover{color:#fff8;}
+.made{color:#fff;font-family: poppins;font-weight: 600;letter-spacing: .65px;font-size:14px;}
+.made:hover{color:#fff9;text-decoration: none;}
+.logo1 img{display:block;margin: auto;}
+.menu-1{float:right;display: block;}
+.content-side{padding-top:20vh;color:#fff;}
+.body-nofooter{height:90vh;}
+.content-side h1{line-height:4rem;color:#fff;font-weight: 700}
+.content-side .btn{color:#fff;}
+#landing .logout .modal-content {background-color: #38394a;margin:auto;padding:50px;}
+#landing .modal-content .btn{border-radius: 50px}
+#landing .modal-content .blue.bg{background: #22B000;border-color:#22B000;}
+.lets.go{color:#353535;}
+.lets.go h1{color:#353535;}
+footer{bottom:0;position: absolute;height:10vh}
+footer.navbar{border-bottom:0;border-top:1px solid #F4E70150;height:60px;}
+footer .made{color:#fff;font-weight: 500}
+.made-texts{border-left: 4px solid #F2DC0B}
+.modal-backdrop {z-index: 0;}
+/*============Responsiveness=================*/
+@media (min-width: 768px)  and (orientation: landscape) {
+  .lefty{display: block}
+  .rightyone{display: block}
+}
+@media (min-width: 20px) and (max-width: 767px) {
+  .lefty{display: none}
+  .rightyone{display: none;padding-top:4vh;}
+  .weblogo{width:50%;}
+  .webmenu{width:50%;}
+  .site-title1{display: none}
+  h1{font-size: 28px}
+  h2{font-size: 22px}
+  h4{font-size: 16px}
+  .content-side{padding: 0}
+  .content-side{padding-top:20vh;}
+  #landing .mycontent .overlay{background-color:#0005;position: absolute;width: 100%;height: 100%}
+  #landing .modal-content .btn{margin-bottom: 25px}
+}
+@media (min-width: 10px) and (max-width: 480px) {
+	 #landing .mycontent{background-color: #0008;position: absolute;width: 100%;height: 100%;background:url('../assets/mobile-bg.jpg');background-repeat: no-repeat;background-position: bottom right;background-size: cover;background-color:#B00017;}
+	.content-side{padding-top:10vh;}
+}
+@media (min-width: 20px) and (max-width: 991px) {
+  #navbarNavDropdown {position: fixed;right: 2rem;top: 66px;background-color: #e45631;padding: 15px;z-index: 99;border-bottom: 3px solid #f6e901;}
+}
