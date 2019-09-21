@@ -9,7 +9,7 @@
     
     $sessions->logout();
 
-    $func->redirect_to('/HNG_Internship/index.php');
+    $func->redirect_to('/index.php');
 
 
 
